@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.R
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.adapter.ResultAdapter
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.databinding.FragmentHomeBinding
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.activity.QuizGenerateActivity
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.viewmodel.quiz.ResultViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -18,6 +20,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
+ 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
