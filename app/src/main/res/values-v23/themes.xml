@@ -3,7 +3,12 @@
     <style name="Theme.DigiAcademy" parent="Base.Theme.DigiAcademy">
         <!-- Transparent system bars for edge-to-edge. -->
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="android:statusBarColor">@color/app_color</item>
+        <item name="android:windowLightStatusBar">@color/app_color</item>
+        <item name="colorPrimary">@color/app_color</item>
     </style>
+
+
+
+
 </resources>
