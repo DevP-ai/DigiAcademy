@@ -78,6 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SUBMIT"
+            android:backgroundTint="@color/app_color"
             android:layout_marginTop="30dp"
             android:textSize="18dp"
             android:paddingVertical="10dp" />
