@@ -6,4 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.QuizGenerateActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        app:title="Quiz"
+        android:contentDescription="back"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="@color/white"
+        app:titleTextColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_80sdp"
+        app:layout_constraintTop_toBottomOf="@id/tbMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20ssp"
+            android:text="Please select options"
+            android:textColor="@color/blue1"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/categoryTil"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_13sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_13sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_13sdp"
+            app:boxCornerRadiusTopStart="@dimen/_13sdp"
+            app:cursorColor="@color/blue1"
+            app:hintTextColor="@color/blue1"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:startIconTint="@color/black">
+
+            <AutoCompleteTextView
+                android:id="@+id/etProductCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="@color/blue3"
+                android:clickable="false"
+                android:contentDescription="Question Category"
+                android:focusable="false"
+                android:longClickable="false"
+                android:inputType="none"
+                android:hint="Question Category"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/difficultyTil"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_13sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_13sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_13sdp"
+            app:boxCornerRadiusTopStart="@dimen/_13sdp"
+            app:cursorColor="@color/blue1"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:hintTextColor="@color/blue1"
+            app:startIconTint="@color/black">
+
+            <AutoCompleteTextView
+                android:id="@+id/etQuestionDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTint="@color/blue3"
+                android:clickable="false"
+                android:focusable="false"
+                android:contentDescription="Question Difficulty"
+                android:longClickable="false"
+                android:inputType="none"
+                android:hint="Question Difficulty"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGenerateQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="Generate Questions"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="@dimen/_8sdp" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
