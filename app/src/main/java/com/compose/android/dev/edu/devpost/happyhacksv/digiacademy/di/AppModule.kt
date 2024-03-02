@@ -3,6 +3,7 @@ package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.di
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.news.NewsApiService
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSource
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSourceImplementation
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.NewsRepository
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.NEWS_API_BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -39,5 +40,11 @@ class AppModule {
         return NewsDataSourceImplementation(newsApiService)
     }
 
+
+    @Singleton
+    @Provides
+    fun provideNewsRepository(newsDataSource: NewsDataSource): NewsRepository {
+        return NewsRepository(newsDataSource)
+    }
 
 }
