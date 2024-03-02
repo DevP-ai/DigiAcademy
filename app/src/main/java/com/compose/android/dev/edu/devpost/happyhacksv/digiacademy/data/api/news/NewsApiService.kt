@@ -1,6 +1,6 @@
-package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api
+package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.news
 
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.NewsResponse
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.news.NewsResponse
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.NEWS_API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

@@ -1,4 +1,4 @@
-package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity
+package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.news
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

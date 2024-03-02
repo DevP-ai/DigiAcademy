@@ -1,13 +1,13 @@
-package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource
+package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news
 
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.NewsApiService
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.NewsResponse
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.news.NewsApiService
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.news.NewsResponse
 import retrofit2.Response
 import javax.inject.Inject
 
 class NewsDataSourceImplementation @Inject constructor(
     private val newsApiService: NewsApiService
-):NewsDataSource {
+): NewsDataSource {
     override suspend fun getNewsDataSource(
         country: String,
         category: String,
