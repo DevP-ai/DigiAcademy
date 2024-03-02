@@ -7,4 +7,7 @@
     <color name="blue1">#0036FA</color>
     <color name="blue2">#3B64FA</color>
     <color name="blue3">#778DDD</color>
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_200">#FFBB86FC</color>
 </resources>

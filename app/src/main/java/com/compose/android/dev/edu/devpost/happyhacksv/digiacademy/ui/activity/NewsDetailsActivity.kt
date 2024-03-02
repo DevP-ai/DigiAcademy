@@ -9,8 +9,10 @@ import com.bumptech.glide.Glide
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.R
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.news.Article
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.databinding.ActivityNewsDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
 import java.io.Serializable
 
+@AndroidEntryPoint
 class NewsDetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewsDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
