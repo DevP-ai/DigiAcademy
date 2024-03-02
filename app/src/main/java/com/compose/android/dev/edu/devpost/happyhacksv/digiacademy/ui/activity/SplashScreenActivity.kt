@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.MainActivity
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.R
 import dagger.hilt.android.AndroidEntryPoint
 

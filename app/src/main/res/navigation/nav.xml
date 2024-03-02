@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.HomeFragment"
+        android:name="com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/newsFragment"
-        android:name="com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.NewsFragment"
+        android:name="com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.fragment.NewsFragment"
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" />
 </navigation>
