@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.R
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.adapter.NewsAdapter
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.databinding.FragmentNewsBinding
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.viewmodel.NewsViewModel
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.viewmodel.news.NewsViewModel
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.Status
 import dagger.hilt.android.AndroidEntryPoint
 

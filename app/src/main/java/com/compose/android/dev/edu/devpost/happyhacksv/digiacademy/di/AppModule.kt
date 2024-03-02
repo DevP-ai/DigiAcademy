@@ -7,6 +7,7 @@ import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasour
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.quiz.QuizDataSource
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.quiz.QuizDataSourceImplement
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.news.NewsRepository
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.quiz.QuizRepository
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.NEWS_API_BASE_URL
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.QUIZ_API_BASE_URL
 import dagger.Module
@@ -72,6 +73,12 @@ class AppModule {
     @Provides
     fun provideNewsRepository(newsDataSource: NewsDataSource): NewsRepository {
         return NewsRepository(newsDataSource)
+    }
+
+    @Singleton
+    @Provides
+    fun provideQuizRepository(quizDataSource: QuizDataSource):QuizRepository{
+        return QuizRepository(quizDataSource)
     }
 
 }

@@ -1,4 +1,4 @@
-package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.viewmodel
+package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.viewmodel.news
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
