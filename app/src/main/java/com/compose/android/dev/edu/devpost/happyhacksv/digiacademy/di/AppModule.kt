@@ -1,11 +1,15 @@
 package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.di
 
+import android.content.Context
+import androidx.room.Room
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.news.NewsApiService
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.quiz.QuizApiService
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSource
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSourceImplementation
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.quiz.QuizDataSource
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.quiz.QuizDataSourceImplement
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.roomDB.QuizResultDao
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.roomDB.ResultDataBase
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.news.NewsRepository
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.quiz.QuizRepository
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.NEWS_API_BASE_URL
@@ -13,6 +17,7 @@ import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.App
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -79,6 +84,23 @@ class AppModule {
     @Provides
     fun provideQuizRepository(quizDataSource: QuizDataSource):QuizRepository{
         return QuizRepository(quizDataSource)
+    }
+
+    @Singleton
+    @Provides
+    fun provideRoomDB(@ApplicationContext context: Context):ResultDataBase{
+        return Room.databaseBuilder(
+            context,
+            ResultDataBase::class.java,"quizResult"
+        )
+            .addMigrations(ResultDataBase.MIGRATION_1_2)
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideQuizResultDao(resultDataBase: ResultDataBase): QuizResultDao {
+        return resultDataBase.quizResultDao()
     }
 
 }
