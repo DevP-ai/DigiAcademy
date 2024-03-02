@@ -1,5 +1,6 @@
 package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.di
 
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.NewsApiService
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.NEWS_API_BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -21,6 +22,13 @@ class AppModule {
             .baseUrl(NEWS_API_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+
+    @Singleton
+    @Provides
+    fun provideApiService( @Named("newsRetrofit") retrofit: Retrofit): NewsApiService {
+        return retrofit.create(NewsApiService::class.java)
     }
 
 }
