@@ -8,6 +8,7 @@ import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.App
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Named
@@ -15,7 +16,7 @@ import javax.inject.Singleton
 
 
 @Module
-@InstallIn(Singleton::class)
+@InstallIn(SingletonComponent::class)
 class AppModule {
     @Singleton
     @Provides
