@@ -4,7 +4,9 @@ import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.news
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.api.quiz.QuizApiService
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSource
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSourceImplementation
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.NewsRepository
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.quiz.QuizDataSource
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.quiz.QuizDataSourceImplement
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.news.NewsRepository
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.NEWS_API_BASE_URL
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.AppConstant.QUIZ_API_BASE_URL
 import dagger.Module
@@ -59,6 +61,12 @@ class AppModule {
         return NewsDataSourceImplementation(newsApiService)
     }
 
+
+    @Singleton
+    @Provides
+    fun provideQuizDataSource(quizApiService: QuizApiService): QuizDataSource {
+        return QuizDataSourceImplement(quizApiService)
+    }
 
     @Singleton
     @Provides

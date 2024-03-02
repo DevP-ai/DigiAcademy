@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.news.NewsResponse
-import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.NewsRepository
+import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.news.NewsRepository
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.Events
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.Result
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.utilities.Status

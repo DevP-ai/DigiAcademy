@@ -1,4 +1,4 @@
-package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository
+package com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.ui.repository.news
 
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.datasource.news.NewsDataSource
 import com.compose.android.dev.edu.devpost.happyhacksv.digiacademy.data.entity.news.NewsResponse
